@@ -1,0 +1,204 @@
+/* blog-style.css - copy into /blog-style.css or your CSS location */
+
+/* Basic reset & layout */
+:root {
+  --accent: #0077b6;
+  --accent-dark: #023e8a;
+  --muted: #6b7280;
+  --bg: #f4f6f8;
+  --content-bg: #fff;
+  --max-width: 1100px;
+  --radius: 10px;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: #111827;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.site-header {
+  background: linear-gradient(90deg, var(--accent), #0096c7);
+  color: #fff;
+  padding: 14px 0;
+}
+.site-header .wrap {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.brand img {
+  border-radius: 6px;
+}
+
+/* Nav */
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 12px;
+}
+.nav a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Article */
+.article {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.article article {
+  background: var(--content-bg);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: 0 6px 18px rgba(13, 38, 59, 0.06);
+}
+.article h1 {
+  font-size: 1.9rem;
+  margin: 0 0 10px;
+}
+.subtitle {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+/* Hero image */
+.hero {
+  margin: 18px 0;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Headings & content */
+h2 {
+  color: var(--accent);
+  margin-top: 1.2rem;
+}
+ol,
+ul {
+  margin-left: 1.2rem;
+}
+kbd {
+  background: #111827;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+/* CTA link */
+a.cta {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(3, 105, 161, 0.08);
+}
+a.cta:hover {
+  background: var(--accent-dark);
+}
+
+/* FAQ accordion */
+.faq .faq-item {
+  margin-bottom: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e6eef5;
+}
+.faq-toggle {
+  width: 100%;
+  text-align: left;
+  background: white;
+  border: 0;
+  padding: 12px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.faq-panel {
+  padding: 12px 14px;
+  border-top: 1px solid #eef4f8;
+  background: #fbfdff;
+}
+
+/* Footer small */
+.article-footer {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Site footer */
+.site-footer {
+  background: #fff;
+  padding: 18px 0;
+  border-top: 1px solid #e6eef5;
+}
+.site-footer a {
+  color: var(--accent);
+}
+
+/* Utilities */
+.small {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #e6eef5;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .site-header .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav {
+    flex-wrap: wrap;
+  }
+  .article article {
+    padding: 18px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
